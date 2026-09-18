@@ -4,10 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_init_boot.mk
+    $(LOCAL_DIR)/omni_dew.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_init_boot-user \
-    omni_init_boot-userdebug \
-    omni_init_boot-eng
+    omni_dew-user \
+    omni_dew-userdebug \
+    omni_dew-eng
 
