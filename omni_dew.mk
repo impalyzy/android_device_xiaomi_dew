@@ -10,19 +10,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Inherit from init_boot device
-$(call inherit-product, device/generic/init_boot/device.mk)
+# Inherit from dew device
+$(call inherit-product, device/xiaomi/dew/device.mk)
 
-PRODUCT_DEVICE := init_boot
-PRODUCT_NAME := omni_init_boot
-PRODUCT_BRAND := generic
-PRODUCT_MODEL := Generic Device
-PRODUCT_MANUFACTURER := generic
+PRODUCT_DEVICE := dew
+PRODUCT_NAME := omni_dew
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 15C
+PRODUCT_MANUFACTURER := Xiaomi
 
-PRODUCT_GMS_CLIENTID_BASE := android-generic
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC=""
+    PRIVATE_BUILD_DESC="dew-user 14 UP1A.231005.007 release-keys"
 
-BUILD_FINGERPRINT := 
-
+BUILD_FINGERPRINT := Xiaomi/dew_global/dew:14/UP1A.231005.007/OS3.0.306.0.WBNMIXM:user/release-keys
