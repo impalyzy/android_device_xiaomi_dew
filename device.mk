@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-LOCAL_PATH := device/generic/init_boot
+LOCAL_PATH := device/xiaomi/dew
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
