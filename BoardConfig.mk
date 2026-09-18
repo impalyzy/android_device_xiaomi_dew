@@ -3,20 +3,25 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-DEVICE_PATH := device/generic/init_boot
+DEVICE_PATH := device/xiaomi/dew
+
+# Device Identification
+TARGET_DEVICE := dew
+PRODUCT_NAME := omni_dew
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := generic
-TARGET_CPU_ABI := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 := 
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := generic
+
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := init_boot
+TARGET_BOOTLOADER_BOARD_NAME := dew
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -48,7 +53,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
-TARGET_BOARD_PLATFORM := unknown
+TARGET_BOARD_PLATFORM := mt6768
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -62,4 +67,3 @@ TW_USE_TOOLBOX := true
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
-
