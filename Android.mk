@@ -5,7 +5,7 @@
 #
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),init_boot)
+ifeq ($(TARGET_DEVICE),dew)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
 
