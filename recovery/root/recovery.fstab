@@ -1,7 +1,24 @@
 # Android fstab file for TWRP
-#<src>  <mnt_point>  <type>  <mnt_flags>  <fs_mgr_flags>
-/dev/block/bootdevice/by-name/system    /system    ext4    defaults    defaults
-/dev/block/bootdevice/by-name/userdata  /data      ext4    defaults    defaults
-/dev/block/bootdevice/by-name/cache     /cache     ext4    defaults    defaults
-/dev/block/bootdevice/by-name/boot      /boot      emmc    defaults    defaults
-/dev/block/bootdevice/by-name/recovery  /recovery  emmc    defaults    defaults
+# <src>                                 <mnt_point>  <type>  <flags>
+
+# Dynamic logical partitions
+system                                  /system      ext4    ro,barrier=1    wait,logical,first_stage_mount
+vendor                                  /vendor      ext4    ro,barrier=1    wait,logical,first_stage_mount
+product                                 /product     ext4    ro,barrier=1    wait,logical,first_stage_mount
+system_ext                              /system_ext  ext4    ro,barrier=1    wait,logical,first_stage_mount
+
+# Physical boot/kernel partitions
+/dev/block/by-name/boot                 /boot        emmc    defaults        flags=slotselect;backup=1;flashimg=1
+/dev/block/by-name/vendor_boot          /vendor_boot emmc    defaults        flags=slotselect;backup=1;flashimg=1
+/dev/block/by-name/dtbo                 /dtbo        emmc    defaults        flags=slotselect;backup=1;flashimg=1
+/dev/block/by-name/vbmeta               /vbmeta      emmc    defaults        flags=slotselect;backup=1;flashimg=1
+/dev/block/by-name/vbmeta_system        /vbmeta_sys  emmc    defaults        flags=slotselect;backup=1;flashimg=1
+/dev/block/by-name/vbmeta_vendor        /vbmeta_ven  emmc    defaults        flags=slotselect;backup=1;flashimg=1
+
+# Userdata and Metadata
+/dev/block/by-name/userdata             /data        f2fs    noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt    wait,check,formattable,quota,latemount,resize,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts
+/dev/block/by-name/metadata             /metadata    ext4    noatime,nosuid,nodev,discard    wait,check,formattable,first_stage_mount
+
+# Removable storage
+/dev/block/mmcblk0p1                    /external_sd auto    defaults        flags=display="MicroSD";storage;wipeingui;removable
+/dev/block/sdb1                         /usb_otg     auto    defaults        flags=display="USB OTG";storage;wipeingui;removable
