@@ -7,7 +7,6 @@ DEVICE_PATH := device/xiaomi/dew
 
 # Device Identification
 TARGET_DEVICE := dew
-PRODUCT_NAME := omni_dew
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
