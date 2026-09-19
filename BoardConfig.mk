@@ -36,7 +36,6 @@ BOARD_KERNEL_TAGS_OFFSET := 0x0e000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MOVE_HEADER_KEY_TO_VENDOR_BOOT := true
-# BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
@@ -46,6 +45,14 @@ endif
 
 # Virtual A/B Configuration
 AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    vendor_boot \
+    init_boot \
+    dtbo \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Partition Sizes & Filesystems
