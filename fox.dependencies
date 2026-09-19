@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "impalyzy/android_kernel_xiaomi_dew",
+    "target_path": "kernel/xiaomi/dew",
+    "revision": "main"
+  }
+]
