@@ -26,4 +26,4 @@ PRODUCT_COPY_FILES += \
     system/core/rootdir/init.rc:recovery/root/init.rc
 
 # Shipping API level (Android 15)
-PRODUCT_SHIPPING_API_LEVEL := 35
+# PRODUCT_SHIPPING_API_LEVEL := 35
