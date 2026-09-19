@@ -66,9 +66,8 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 
-# System SDK & API Alignment
+# System SDK Alignment
 BOARD_SYSTEMSDK_VERSIONS := 35
-PRODUCT_SHIPPING_API_LEVEL := 35
 
 # Anti-rollback override
 PLATFORM_SECURITY_PATCH := 2099-12-31
