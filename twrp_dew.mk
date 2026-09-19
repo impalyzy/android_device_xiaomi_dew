@@ -1,0 +1,16 @@
+# Inherit from core products
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit TWRP common configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit from dew device
+$(call inherit-product, device/xiaomi/dew/device.mk)
+
+# Product Identifiers
+PRODUCT_DEVICE := dew
+PRODUCT_NAME := twrp_dew
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 15C
+PRODUCT_MANUFACTURER := Xiaomi
