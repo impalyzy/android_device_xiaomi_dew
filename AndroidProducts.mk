@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_dew.mk
+    $(LOCAL_DIR)/fox_dew.mk
 
 COMMON_LUNCH_CHOICES := \
     omni_dew-user \
