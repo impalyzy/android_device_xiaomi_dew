@@ -16,7 +16,7 @@ $(call inherit-product, device/xiaomi/dew/device.mk)
 
 # Product Identifiers
 PRODUCT_DEVICE := dew
-PRODUCT_NAME := omni_dew
+PRODUCT_NAME := fox_dew
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 15C
 PRODUCT_MANUFACTURER := Xiaomi
